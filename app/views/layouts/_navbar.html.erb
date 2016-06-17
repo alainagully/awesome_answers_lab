@@ -1,0 +1,38 @@
+
+
+  <%= render "/layouts/navbar" %>
+  <%= link_to "Home", root_path %>
+
+  <%= link_to("About Us", about_path, {class: "abc", id: "xyz"}) %>
+
+
+
+  <a href="<%= greet_path("Alaina") %>">Greet Alaina</a>
+
+  <a href="<%= temp_path %>">Temp Converter</a>
+
+  <%= link_to "Cowsay", cowsay_path %>
+
+  <%= link_to "New Question", new_question_path %>
+
+  <%= link_to "All Questions", questions_path %>
+
+  <% if user_signed_in?%>
+    Hello, <%= current_user.first_name%>
+    <%= link_to "Sign Out", sessions_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_path %>
+    <%= link_to "Sign In", new_session_path %>
+
+  <% end %>
+
+
+  <% if flash[:notice] %>
+    <div class="flash-notice"><%= flash[:notice] %></div>
+  <% elsif flash[:alert]%>
+    <div class="flash-alert"><%= flash[:alert] %></div>
+    <% end %>
+
+
+
+  <hr>
