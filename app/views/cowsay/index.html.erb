@@ -1,0 +1,9 @@
+<h1>Cowsay</h1>
+
+<%= form_tag  cowsay_submit_path do%>
+<!--
+helper methed that creates a form. It's just like link_tag but creates a form instead -->
+    <%= text_field_tag :sentence %>
+    <%=  submit_tag "Cowsay"%>
+
+ <% end %>

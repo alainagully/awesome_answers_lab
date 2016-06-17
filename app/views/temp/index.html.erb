@@ -1,0 +1,10 @@
+<h1>Temp Converter</h1>
+<%= form_tag  temp_submit_path do%>
+
+
+<%= text_field_tag :temp_c %>
+<%=  submit_tag "Convert"%>
+
+<%= @temp_f %>
+
+<% end %>
